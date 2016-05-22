@@ -1,0 +1,43 @@
+User
+    ident Text
+    password Text Maybe
+    UniqueUser ident
+    deriving Typeable
+Email
+    email Text
+    userId UserId Maybe
+    verkey Text Maybe
+    UniqueEmail email
+Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived.
+    message Text
+    userId UserId Maybe
+    deriving Eq
+    deriving Show
+
+ -- By default this file is used in Model.hs (which is imported by Foundation.hs)
+Carpeta json
+    nombreCarpeta Text
+    carpetaPadre CarpetaId Maybe
+    UniqueCarpeta carpetaPadre !force
+    deriving Show
+
+Calificacion json
+    calificacion Int
+    comentario Text
+    archivoId ArchivoId Maybe
+    deriving Show
+    deriving Eq
+
+Categoria json
+    nombreCategoria Text
+
+Archivo json
+    nombreArchivo Text
+    extencion Text
+    tamano Text
+    estado Text
+    fechaSubida UTCTime
+    descripcion Text
+    carpetaContenedora CarpetaId Maybe
+    categoria CategoriaId Maybe
+    deriving Show

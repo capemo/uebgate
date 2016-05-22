@@ -1,0 +1,7 @@
+<h1>All Files
+<div .jumbotron>
+    <ul>
+        $forall Entity id archivo <- allFiles
+            <h4>
+                <li>
+                    <a>#{archivoNombreArchivo archivo}
