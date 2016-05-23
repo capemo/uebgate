@@ -21,7 +21,7 @@ getUEBGateHR = do
         toWidget
             [lucius|
                 body {
-                    background-image:url(@{StaticR uebgate_png});
+                    background-image:url(@{StaticR images_uebgate_png});
                 }
             |]
         toWidgetBody
